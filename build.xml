@@ -33,7 +33,6 @@
         <mkdir dir="bin"/>
         <copy includeemptydirs="false" todir="bin">
             <fileset dir="src">
-                <exclude name="**/*.launch"/>
                 <exclude name="**/*.java"/>
             </fileset>
         </copy>
@@ -56,7 +55,7 @@
         <mkdir dir="${junit.output.dir}"/>
         <junit fork="yes" printsummary="withOutAndErr">
             <formatter type="xml"/>
-            <test name="ahorcado.AhorcadoUnitTest" todir="${junit.output.dir}"/>
+            <test name="ahorcado.test.AhorcadoUnitTest" todir="${junit.output.dir}"/>
             <jvmarg line="-ea"/>
             <classpath refid="ahorcado.classpath"/>
         </junit>
