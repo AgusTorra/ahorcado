@@ -67,7 +67,7 @@
     </target>
     <target name="AhorcadoUnitTest (1)">
         <mkdir dir="${junit.output.dir}"/>
-        <junit failureProperty="test.failure" haltonfailure="true" fork="yes" printsummary="yes">
+        <junit fork="yes" printsummary="withOutAndErr">
             <formatter type="xml"/>
             <test name="ahorcado.test.AhorcadoUnitTest" todir="${junit.output.dir}"/>
             <jvmarg line="-ea"/>
@@ -77,33 +77,9 @@
     <target name="junitreport">
         <junitreport todir="${junit.output.dir}">
             <fileset dir="${junit.output.dir}">
-                <include name="*Test.java"/>
+                <include name="TEST-*.xml"/>
             </fileset>
             <report format="frames" todir="${junit.output.dir}"/>
         </junitreport>
     </target>
-              	
-  	<target name="unit-test-1" >
-
-  	    <mkdir dir="${reports.tests}"/>
-
-  	    <junit printsummary="yes" haltonfailure="yes">
-  	      <classpath>
-  	        <pathelement location="${project.class.path}"/>
-  	        <pathelement location="${build.tests}"/>
-  	        <pathelement path="${java.class.path}"/>
-  	      </classpath>
-
-  	      <formatter type="plain"/>
-  	      <formatter type="xml"/>
-
-  	      <batchtest fork="yes" todir="${reports.tests}">
-  	        <fileset dir="${src.ahorcado.test}">
-  	          <include name="*Test*.java"/>
-  	        </fileset>
-  	      </batchtest>
-
-  	    </junit>
-
-  	</target>          	
 </project>
