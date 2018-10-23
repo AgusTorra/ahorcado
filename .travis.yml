@@ -9,6 +9,8 @@
 #  - bash <(curl -s https://codecov.io/bash)
 
 language: java
-script: mvn test
+script:
+  - mvn test
+  - mvn cobertura:cobertura"
 jdk:
   - oraclejdk8
