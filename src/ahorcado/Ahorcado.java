@@ -10,7 +10,7 @@ import ahorcado.Helper;
 
 import static java.nio.file.Paths.get;
 
-class Ahorcado {
+public class Ahorcado {
     private String palabras[] = {"ahorcado", "primavera", "jugador", "facultad", "programacion"};
     private Map<String, Integer> tiempos = new HashMap<String, Integer>();
     private char palabraActual[] = {'_','_','_','_','_','_','_','_'}; //ahorcado
@@ -21,11 +21,11 @@ class Ahorcado {
     private int errores = 6;
     private Palabra palabra;
 
-    Ahorcado() {
+    public Ahorcado() {
         BasePalabras.generarPalabras();
     }
 
-    boolean ingresarLetra(String letra) {
+    public boolean ingresarLetra(String letra) {
         boolean letraEnPalabra = false;
         if(quedanErrores()) {
             letraEnPalabra = isEnPalabra(letra);
@@ -39,7 +39,7 @@ class Ahorcado {
         return letraEnPalabra;
     }
 
-    void seleccionarModo(String modo) {
+    public void seleccionarModo(String modo) {
         switch (modo) {
             case "Estandar":
                 this.modoJuego = "Estandar";
@@ -53,7 +53,7 @@ class Ahorcado {
         }
     }
 
-    String rankingPorTiempo() {
+    public String rankingPorTiempo() {
         int i = 0; //Posición
         String salida = "Ranking por tiempo\n"; //Titulo de la salida
         tiempos = Helper.ordenarPorValor(tiempos); //Ordeno los tiempos de menor a mayor
@@ -64,7 +64,7 @@ class Ahorcado {
         return salida.substring(0,salida.length()-1);
     }
 
-    String getResultado() {
+    public String getResultado() {
         if (!quedanErrores()) {
             return "Perdiste!";
         } else if (isPalabraDescubierta() && quedanErrores()) {
@@ -84,25 +84,25 @@ class Ahorcado {
         }
     }
 
-    int getTiempo() {
+    public int getTiempo() {
         cronometro.stop();
         int tiempo = (int) cronometro.getSeconds();
         tiempos.put(jugador.getNombre(), tiempo);
         return (int) cronometro.getSeconds();
     }
 
-    void iniciarCronometro() {
+    public void iniciarCronometro() {
         cronometro = new Cronometro();
         cronometro.start();
     }
 
-    void comenzarJuego() {
+    public void comenzarJuego() {
         this.palabra = BasePalabras.obtenerPalabra(Opciones.getIdioma(), Opciones.getDificultad(),
                 Opciones.getTematica());
         //prepararPalabra();
     }
 
-    void seleccionarDificultad(String dificultad) {
+    public void seleccionarDificultad(String dificultad) {
         Opciones.seleccionarDificultadPalabras(dificultad);
     }
 
@@ -110,29 +110,29 @@ class Ahorcado {
         return Helper.ArrayToString(palabraActual).equals(palabras[0]);
     }
 
-    void seleccionarIdioma(String idioma) {
+    public void seleccionarIdioma(String idioma) {
         Opciones.seleccionarIdiomaPalabras(idioma);
     }
 
-    void seleccionarTematica(String tematica) {
+    public void seleccionarTematica(String tematica) {
         Opciones.seleccionarTematicaPalabras(tematica);
     }
 
-    void seleccionarTiempoLimite(int tiempo) { Opciones.seleccionarTiempoLimite(tiempo); }
+    public void seleccionarTiempoLimite(int tiempo) { Opciones.seleccionarTiempoLimite(tiempo); }
 
     private boolean isEnPalabra(String letra) {
         return palabras[0].contains(letra);
     }
 
-    boolean arriesgarPalabra(String palabra) {
+    public boolean arriesgarPalabra(String palabra) {
         return this.palabras[0].equals(palabra);
     }
 
-    void jugadorAnonimo() {
+    public void jugadorAnonimo() {
         this.jugador = new Jugador("anonimo");
     }
 
-    void altaJugador(Jugador jugador) {
+    public void altaJugador(Jugador jugador) {
         this.jugador = jugador;
     }
 
@@ -140,47 +140,47 @@ class Ahorcado {
         return errores > 0;
     }
 
-    String getLetrasAcertadas() {
+    public String getLetrasAcertadas() {
         return letrasAcertadas.substring(0, letrasAcertadas.length()-1);
     }
 
-    String getPalabraFija() {
+    public String getPalabraFija() {
         return palabras[0];
     }
 
-    String[] getPalabras() {
+    public String[] getPalabras() {
         return palabras;
     }
 
-    Jugador getJugador() {
+    public Jugador getJugador() {
         return jugador;
     }
 
-    String getModoJuego() {
+    public String getModoJuego() {
         return this.modoJuego;
     }
 
-    String getIdiomaPalabra() {
+    public String getIdiomaPalabra() {
         return Opciones.getIdioma();
     }
 
-    String getDificultadPal() {
+    public String getDificultadPal() {
         return Opciones.getDificultad();
     }
 
-    String getTematicaPal() {
+    public String getTematicaPal() {
         return Opciones.getTematica();
     }
 
-    int getTiempoLimite() {
+    public int getTiempoLimite() {
         return Opciones.getTiempoLimite();
     }
 
-    Palabra getPalabra() {
+    public Palabra getPalabra() {
         return palabra;
     }
 
-    String getPalabraActual() {
+    public String getPalabraActual() {
         return Helper.ArrayToString(palabraActual);
     }
 
