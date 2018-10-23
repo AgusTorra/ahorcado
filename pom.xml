@@ -24,7 +24,7 @@
 	<url>http://cobertura.github.io/cobertura/</url>
 
 	<build>
-		<sourceDirectory>src/ahorcado</sourceDirectory>
+		<!--<sourceDirectory>src/ahorcado</sourceDirectory>-->
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
