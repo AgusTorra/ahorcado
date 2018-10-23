@@ -23,8 +23,8 @@
 	<name>Cobertura Maven plug-in example for Java project</name>
 	<url>http://cobertura.github.io/cobertura/</url>
 	
-	<reporting>
-		<plugins>
+	
+		<!--<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<!--<artifactId>maven-compiler-plugin</artifactId>
@@ -32,7 +32,7 @@
 				<configuration>
 					<source>1.8</source>
 					<target>1.8</target>
-				</configuration>-->
+				</configuration>
 				<artifactId>maven-project-info-reports-plugin</artifactId>
 				<version>2.7</version>
 				<configuration>
@@ -54,12 +54,35 @@
 					<check />
 				</configuration>
 			</plugin>
-		</plugins>
-		</reporting>
+		</plugins>-->
+		
 		
 	<build>
 		<testSourceDirectory>src/ahorcado</testSourceDirectory>
 		<!--<sourceDirectory>src/ahorcado</sourceDirectory>-->
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.1</version>
+				<configuration>
+					<source>1.7</source>
+					<target>1.7</target>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>cobertura-maven-plugin</artifactId>
+				<version>2.7</version>
+				<configuration>
+					<formats>
+						<format>html</format>
+						<format>xml</format>
+					</formats>
+					<check />
+				</configuration>
+			</plugin>
+		</plugins>
 		
 	</build>
 
