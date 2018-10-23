@@ -77,7 +77,7 @@
     <target name="junitreport">
         <junitreport todir="${junit.output.dir}">
             <fileset dir="${junit.output.dir}">
-                <include name="TEST-*.xml"/>
+                <include name="*Test.java"/>
             </fileset>
             <report format="frames" todir="${junit.output.dir}"/>
         </junitreport>
