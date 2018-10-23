@@ -67,7 +67,7 @@
     </target>
     <target name="AhorcadoUnitTest (1)">
         <mkdir dir="${junit.output.dir}"/>
-        <junit fork="yes" printsummary="withOutAndErr">
+        <junit failureProperty="test.failure" haltonfailure="test.error" fork="yes" printsummary="yes">
             <formatter type="xml"/>
             <test name="ahorcado.test.AhorcadoUnitTest" todir="${junit.output.dir}"/>
             <jvmarg line="-ea"/>
