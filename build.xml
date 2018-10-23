@@ -65,7 +65,7 @@
         <property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
         <antcall target="build"/>
     </target>
-    <target name="AhorcadoUnitTest (1)">
+    <!--<target name="AhorcadoUnitTest (1)">
         <mkdir dir="${junit.output.dir}"/>
         <junit fork="yes" printsummary="withOutAndErr">
             <formatter type="xml"/>
@@ -81,5 +81,29 @@
             </fileset>
             <report format="frames" todir="${junit.output.dir}"/>
         </junitreport>
-    </target>
+    </target>-->
+              	
+  	<target name="unit-test-1" >
+
+  	    <mkdir dir="${reports.tests}"/>
+
+  	    <junit printsummary="yes" haltonfailure="yes">
+  	      <classpath>
+  	        <pathelement location="${project.class.path}"/>
+  	        <pathelement location="${build.tests}"/>
+  	        <pathelement path="${java.class.path}"/>
+  	      </classpath>
+
+  	      <formatter type="plain"/>
+  	      <formatter type="xml"/>
+
+  	      <batchtest fork="yes" todir="${reports.tests}">
+  	        <fileset dir="${src.test}">
+  	          <include name="**/*Test*.java"/>
+  	        </fileset>
+  	      </batchtest>
+
+  	    </junit>
+
+  	</target>          	
 </project>
