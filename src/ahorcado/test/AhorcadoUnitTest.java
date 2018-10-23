@@ -100,7 +100,7 @@ public class AhorcadoUnitTest {
         ahorcado.ingresarLetra("q");
         ahorcado.ingresarLetra("w");
         //assert
-        assertEquals("Perdistex!", ahorcado.getResultado());
+        assertEquals("Perdiste!", ahorcado.getResultado());
     }
 
     @Test
