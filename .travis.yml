@@ -15,4 +15,4 @@ script:
 jdk:
   - oraclejdk8
 after_success:
-  - bash <(curl -s https://codecov.io/bash) -t "16dbf162-6a47-4fd3-85ad-37f6adf4648a"
+  - bash <(curl -s https://codecov.io/bash)
