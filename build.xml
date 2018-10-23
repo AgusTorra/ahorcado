@@ -65,7 +65,7 @@
         <property name="build.compiler" value="org.eclipse.jdt.core.JDTCompilerAdapter"/>
         <antcall target="build"/>
     </target>
-    <!--<target name="AhorcadoUnitTest (1)">
+    <target name="AhorcadoUnitTest">
         <mkdir dir="${junit.output.dir}"/>
         <junit fork="yes" printsummary="withOutAndErr">
             <formatter type="xml"/>
@@ -77,11 +77,11 @@
     <target name="junitreport">
         <junitreport todir="${junit.output.dir}">
             <fileset dir="${junit.output.dir}">
-                <include name="TEST-*.xml"/>
+                <include name="Test-*.xml"/>
             </fileset>
             <report format="frames" todir="${junit.output.dir}"/>
         </junitreport>
-    </target>-->
+    </target>
               	
   	<target name="unit-test-1" >
 
