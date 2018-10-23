@@ -22,11 +22,8 @@
 
 	<name>Cobertura Maven plug-in example for Java project</name>
 	<url>http://cobertura.github.io/cobertura/</url>
-		
-	<build>
-		<testSourceDirectory>src/ahorcado</testSourceDirectory>
-		<!--<sourceDirectory>src/ahorcado</sourceDirectory>-->
-		<reporting>
+	
+	<reporting>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -59,6 +56,11 @@
 			</plugin>
 		</plugins>
 		</reporting>
+		
+	<build>
+		<testSourceDirectory>src/ahorcado</testSourceDirectory>
+		<!--<sourceDirectory>src/ahorcado</sourceDirectory>-->
+		
 	</build>
 
 	<dependencies>
