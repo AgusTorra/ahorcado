@@ -24,6 +24,7 @@
 	<url>http://cobertura.github.io/cobertura/</url>
 
 	<build>
+		<testSourceDirectory>src/ahorcado/test</testSourceDirectory>
 		<!--<sourceDirectory>src/ahorcado</sourceDirectory>-->
 		<plugins>
 			<plugin>
