@@ -11,6 +11,6 @@
 language: java
 script:
   - mvn test
-  - mvn cobertura:cobertura"
+  - mvn cobertura:cobertura
 jdk:
   - oraclejdk8
