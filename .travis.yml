@@ -10,8 +10,8 @@
 
 language: java
 script:
-  - mvn test
   - mvn cobertura:cobertura
+  - mvn test
 jdk:
   - oraclejdk8
 after_success:
