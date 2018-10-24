@@ -6,24 +6,24 @@ class Opciones {
     private static String idioma = "esp";
     private static int tiempoLimite;
 
-    public Opciones() {
-    }
+    /*public Opciones() {
+    }*/
 
     public static String getDificultad() {
         return dificultad;
     }
 
-    public static void setDificultad(String dificultad) {
+    /*public static void setDificultad(String dificultad) {
         Opciones.dificultad = dificultad;
-    }
+    }*/
 
     public static String getTematica() {
         return tematica;
     }
 
-    public static void setTematica(String tematica) {
+    /*public static void setTematica(String tematica) {
         Opciones.tematica = tematica;
-    }
+    }*/
 
     public static String getIdioma() {
         return idioma;
@@ -37,18 +37,18 @@ class Opciones {
         return tiempoLimite;
     }
 
-    public static void setTiempoLimite(int tiempoLimite) {
+    /*public static void setTiempoLimite(int tiempoLimite) {
         Opciones.tiempoLimite = tiempoLimite;
-    }
+    }*/
 
     static void seleccionarIdiomaPalabras(String idioma) {
         switch (idioma) {
             case "esp":
                 setIdioma("esp");
                 break;
-            case "Ing":
+            /*case "Ing":
                 setIdioma("ing");
-                break;
+                break;*/
         }
     }
 
@@ -57,23 +57,23 @@ class Opciones {
             case "Facil":
                 Opciones.dificultad = "Facil";
                 break;
-            case "Medio":
+            /*case "Medio":
                 Opciones.dificultad = "Intermedia";
                 break;
             case "Dificil":
                 Opciones.dificultad = "Dificil";
-                break;
+                break;*/
         }
     }
 
     static void seleccionarTematicaPalabras(String tematica) {
         switch (tematica) {
-            case "Cine":
+            /*case "Cine":
                 Opciones.tematica = "Cine";
                 break;
             case "Deportes":
                 Opciones.tematica = "Deportes";
-                break;
+                break;*/
             case "Animales":
                 Opciones.tematica = "Animales";
                 break;
@@ -82,18 +82,18 @@ class Opciones {
 
     static void seleccionarTiempoLimite(int tiempo) {
         switch (tiempo) {
-            case 30:
+            /*case 30:
                 Opciones.tiempoLimite = 30;
-                break;
+                break;*/
             case 60:
                 Opciones.tiempoLimite = 60;
                 break;
-            case 90:
+            /*case 90:
                 Opciones.tiempoLimite = 90;
                 break;
             case 120:
                 Opciones.tiempoLimite = 120;
-                break;
+                break;*/
         }
     }
 }

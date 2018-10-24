@@ -44,12 +44,12 @@ public class Ahorcado {
             case "Estandar":
                 this.modoJuego = "Estandar";
                 break;
-            case "Por tiempo":
+            /*case "Por tiempo":
                 this.modoJuego = "Por tiempo";
                 break;
             case "Cuenta regresiva":
                 this.modoJuego = "Cuenta regresiva";
-                break;
+                break;*/
         }
     }
 
@@ -180,9 +180,9 @@ public class Ahorcado {
         return palabra;
     }
 
-    public String getPalabraActual() {
+    /*public String getPalabraActual() {
         return Helper.ArrayToString(palabraActual);
-    }
+    }*/
 
     /*private void prepararPalabra() {
         int longitudPal = this.palabra.getLongitud();

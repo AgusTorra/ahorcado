@@ -18,13 +18,13 @@ public class Jugador {
         this.nombre = nombre;
     }
 
-    public char getSexo() {
+    /*public char getSexo() {
         return sexo;
     }
 
     public void setSexo(char sexo) {
         this.sexo = sexo;
-    }
+    }*/
 
     public String getNombre() {
         return nombre;
@@ -34,7 +34,7 @@ public class Jugador {
         this.nombre = nombre;
     }
 
-    public String getMail() {
+    /*public String getMail() {
         return mail;
     }
 
@@ -48,5 +48,5 @@ public class Jugador {
 
     public void setPassword(String password) {
         this.password = password;
-    }
+    }*/
 }

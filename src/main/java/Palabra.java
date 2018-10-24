@@ -17,43 +17,43 @@ public class Palabra {
         this.palabra = palabra;
     }
 
-    public String getPalabra() {
+    /*public String getPalabra() {
         return palabra;
-    }
+    }*/
 
-    public int getLongitud() {
+    /*public int getLongitud() {
         return this.palabra.length();
-    }
+    }*/
 
-    public void setLongitud(int longitud) {
+    /*public void setLongitud(int longitud) {
         this.longitud = longitud;
-    }
+    }*/
 
-    public void setPalabra(String palabra) {
+    /*public void setPalabra(String palabra) {
         this.palabra = palabra;
-    }
+    }*/
 
     public String getDificultad() {
         return dificultad;
     }
 
-    public void setDificultad(String dificultad) {
+    /*public void setDificultad(String dificultad) {
         this.dificultad = dificultad;
-    }
+    }*/
 
     public String getTematica() {
         return tematica;
     }
 
-    public void setTematica(String tematica) {
+    /*public void setTematica(String tematica) {
         this.tematica = tematica;
-    }
+    }*/
 
     public String getIdioma() {
         return idioma;
     }
 
-    public void setIdioma(String idioma) {
+    /*public void setIdioma(String idioma) {
         this.idioma = idioma;
-    }
+    }*/
 }
