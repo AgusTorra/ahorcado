@@ -70,9 +70,11 @@
 					<target>1.8</target>
 				</configuration>-->
 				<artifactId>maven-project-info-reports-plugin</artifactId>
-				<version>2.7</version>
+				<version>3.0</version>
 				<configuration>
-					<dependencyLocationsEnabled>false</dependencyLocationsEnabled>
+					<source>1.8</source>
+					<target>1.8</target>
+					<!--<dependencyLocationsEnabled>false</dependencyLocationsEnabled>-->
 				</configuration>
 			</plugin>
 			
