@@ -108,7 +108,8 @@
 	</dependencies>
 
 	<build>
-		<sourceDirectory>src/main/java</sourceDirectory>
+		<testSourceDirectory>src/ahorcado</testSourceDirectory>
+		<sourceDirectory>src/ahorcado</sourceDirectory>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
