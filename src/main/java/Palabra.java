@@ -1,4 +1,4 @@
-package ahorcado;
+package main.java;
 
 public class Palabra {
     private String dificultad;

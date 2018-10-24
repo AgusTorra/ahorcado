@@ -1,4 +1,4 @@
-package ahorcado;
+package main.java;
 
 import java.util.Collections;
 import java.util.Comparator;

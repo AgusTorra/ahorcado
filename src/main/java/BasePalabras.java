@@ -1,10 +1,10 @@
-package ahorcado;
+package main.java;
 
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
 
-import ahorcado.Palabra;
+import main.java.Palabra;
 
 public class BasePalabras {
     private static Map<Integer, Palabra> base = new HashMap<Integer, Palabra>();

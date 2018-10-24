@@ -1,12 +1,12 @@
-package ahorcado;
+package main.java;
 
 import java.util.HashMap;
 import java.util.Map;
 
-import ahorcado.Jugador;
-import ahorcado.Palabra;
-import ahorcado.Cronometro;
-import ahorcado.Helper;
+import main.java.Cronometro;
+import main.java.Helper;
+import main.java.Jugador;
+import main.java.Palabra;
 
 import static java.nio.file.Paths.get;
 

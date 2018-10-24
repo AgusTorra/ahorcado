@@ -1,4 +1,4 @@
-package ahorcado;
+package main.java;
 
 class Opciones {
     private static String dificultad = "Facil";

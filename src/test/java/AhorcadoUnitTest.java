@@ -1,9 +1,9 @@
-package ahorcado.test;
+package test.java;
 
 import org.junit.Test;
 
-import ahorcado.Ahorcado;
-import ahorcado.Jugador;
+import main.java.Ahorcado;
+import main.java.Jugador;
 
 import static org.junit.Assert.assertEquals;
 
