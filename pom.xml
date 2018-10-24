@@ -306,7 +306,7 @@
 			<scope>provided</scope>
 		</dependency>
 
-		<!-- test dependencies -->
+		test dependencies
 		<dependency>
 			<groupId>org.apache.maven.shared</groupId>
 			<artifactId>maven-plugin-testing-harness</artifactId>
