@@ -13,7 +13,7 @@ import static org.junit.Assert.assertEquals;
  * @see <a href="http://d.android.com/tools/testing">Testing documentation</a>
  */
 public class AhorcadoUnitTest {
-    /*@Test
+    @Test
     public void jugadorAnonimoTest() {
         //arrange
         Ahorcado ahorcado = new Ahorcado();
@@ -134,7 +134,7 @@ public class AhorcadoUnitTest {
         boolean resultado = ahorcado.arriesgarPalabra("ahorcado");
         //assert
         assertEquals(true, resultado);
-    }*/
+    }
 
     @Test
     //La palabra correcta es ahorcado
