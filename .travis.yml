@@ -1,7 +1,12 @@
 language: java
-sudo: false # faster builds
 
-#script: "mvn -DwithHistory org.pitest:pitest-maven:mutationCoverage"
+jdk:
+  - oraclejdk8
+
+install: true
+
+script:
+  - mvn clean test
 
 after_success:
-  - bash <(curl -s https://codecov.io/bash)
+  - mvn clean test jacoco:report coveralls:report
